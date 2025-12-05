@@ -1,0 +1,2 @@
+export interface IFormat {
+}
