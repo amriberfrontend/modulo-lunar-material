@@ -1,7 +1,7 @@
 import { FormatEuropean } from './format-european';
 
 describe('FormatEuropean', () => {
-  it('should create an instance', () => {
-    expect(new FormatEuropean()).toBeTruthy();
+  it('should be 396.15', () => {
+    expect(new FormatEuropean().getTemperature(123)).toBe(396.15);
   });
 });

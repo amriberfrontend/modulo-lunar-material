@@ -1,9 +1,9 @@
 import { IMaterial } from "./i-material";
 
 export interface ICriterion {
-  group: 'igneous' | 'metamorphic' | 'sedentary';
-  texture?: 'vitreous' | 'phaneritic' | 'aphanitic';
-  grainSize?: ('veryCoarse' | 'coarse' | 'medium' | 'fine')[];
+  group: string;
+  texture?: string;
+  grainSize?: string[];
 
   matches(rock: IMaterial): boolean;
 }

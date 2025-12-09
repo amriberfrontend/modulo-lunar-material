@@ -1,7 +1,7 @@
 import { FormatAmerican } from './format-american';
 
 describe('FormatAmerican', () => {
-  it('should create an instance', () => {
-    expect(new FormatAmerican()).toBeTruthy();
+  it('should be -238.27', () => {
+    expect(new FormatAmerican().getTemperature(123)).toBe(-238.27);
   });
 });

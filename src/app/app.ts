@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { OptionFactory } from './services/option-factory';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,12 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App implements OnInit {
+  optionsFactory = inject(OptionFactory);
+  ngOnInit(): void {
+    console.log(this.optionsFactory.getClassificationOptions());
+  }
   protected readonly title = signal('modulo-lunar-material');
+
+
 }
