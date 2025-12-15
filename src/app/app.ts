@@ -1,19 +1,17 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { OptionFactory } from './services/option-factory';
+import { RockForm } from "./components/rock-form/rock-form";
+import { Rock } from './models/rock';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RockForm],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App implements OnInit {
-  optionsFactory = inject(OptionFactory);
-  ngOnInit(): void {
-    console.log(this.optionsFactory.getClassificationOptions());
-  }
+export class App {
   protected readonly title = signal('modulo-lunar-material');
 
+  rock = new Rock();
 
 }

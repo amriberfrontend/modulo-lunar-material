@@ -15,6 +15,7 @@ html {
     typography: Roboto,
     density: 0,
   ));
+  font-size: 100%;
 }
 
 body {
@@ -37,3 +38,8 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  width: 90rem;
+  margin: 0 auto;
+}

@@ -1,14 +1,13 @@
 export interface IMaterial {
-  id: string;
+  identifier: string;
   name: string;
   group: string;
-  grainSize: string;
+  hardness: number;
+  grainSize: number;
+  utility: string;
+  crystalSize: number;
+  formationTemperature: number;
+  structure: string;
+  grainShape: string;
   texture: string;
-  hardness: number | undefined;
-  utility: string | undefined;
-  crystalSize: number | undefined;
-  formingTemperature: number | undefined;
-  structure: string | undefined;
-  grainShape: string | undefined;
-
 }

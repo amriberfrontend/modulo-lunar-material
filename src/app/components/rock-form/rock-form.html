@@ -1,1 +1,36 @@
-<p>rock-form works!</p>
+<form>
+  <mat-form-field>
+    <mat-label i18n>Identifier</mat-label>
+    <input matInput [field]="rockForm.identifier">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label i18n>Name</mat-label>
+    <input matInput [field]="rockForm.name">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label i18n>Group</mat-label>
+    <mat-select [field]="rockForm.group">
+      <mat-option value="igneous" i18n>Igneous</mat-option>
+      <mat-option value="sedimentary" i18n>Sedimentary</mat-option>
+      <mat-option value="metamorphic" i18n>Metamorphic</mat-option>
+    </mat-select>
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label i18n>Hardness</mat-label>
+    <input matInput type="number" [field]="rockForm.hardness">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label i18n>Name</mat-label>
+    <input matInput [field]="rockForm.name">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label i18n>Name</mat-label>
+    <input matInput [field]="rockForm.name">
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label i18n>Name</mat-label>
+    <input matInput [field]="rockForm.name">
+  </mat-form-field>
+
+</form>
+<button matButton="filled" (click)="showValues()">Test</button>
