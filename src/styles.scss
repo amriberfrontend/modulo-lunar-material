@@ -1,4 +1,4 @@
-
+@use "bootstrap/dist/css/bootstrap-grid.min";
 // Include theming for Angular Material with `mat.theme()`.
 // This Sass mixin will define CSS variables that are used for styling Angular Material
 // components according to the Material 3 design spec.
@@ -38,8 +38,3 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.container {
-  width: 90rem;
-  margin: 0 auto;
-}

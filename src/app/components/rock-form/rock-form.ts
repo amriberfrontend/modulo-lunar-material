@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Field, form, required } from '@angular/forms/signals';
 import { Rock } from '../../models/rock';
 import { IMaterial } from '../../models/i-material';
+import { RockBuilder } from '../../models/rock-builder';
 
 @Component({
   selector: 'app-rock-form',
@@ -35,7 +36,19 @@ export class RockForm {
   showValues() {
     console.log("hi");
     const rockData = this.rockModel();
-    alert(rockData.identifier + " \n" + rockData.name);
-
+    this.rock.set(new RockBuilder()
+                    .setIdentifier(rockData.identifier)
+                    .setName(rockData.name)
+                    .setGroup(rockData.group)
+                    .setHardness(rockData.hardness)
+                    .setGrainSize(rockData.grainSize)
+                    .setUtility(rockData.utility)
+                    .setCrystalSize(rockData.crystalSize)
+                    .setFormationTemperature(rockData.formationTemperature)
+                    .setStructure(rockData.structure)
+                    .setGrainShape(rockData.grainShape)
+                    .setTexture(rockData.texture)
+                    .build());
+    alert(this.rock.toString());
   }
 }
